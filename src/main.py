@@ -1,3 +1,4 @@
+import utils.session
 def calculer_moyenne(notes):
     if not notes:
         raise ValueError("La liste des notes est vide")
