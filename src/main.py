@@ -1,7 +1,19 @@
-﻿def calculer_moyenne(notes):
+def calculer_moyenne(notes):
     if not notes:
         raise ValueError("La liste des notes est vide")
     return sum(notes) / len(notes)
+
+
+def determiner_mention(moyenne):
+    if moyenne >= 16:
+        return "Très bien"
+    if moyenne >= 14:
+        return "Bien"
+    if moyenne >= 12:
+        return "Assez bien"
+    if moyenne >= 10:
+        return "Passable"
+    return "Insuffisant"
 
 
 def afficher_resultat(nom, notes):
@@ -12,6 +24,9 @@ def afficher_resultat(nom, notes):
         print("Résultat : Admis")
     else:
         print("Résultat : Non admis")
+
+
+    print("Mention :", determiner_mention(moyenne))
 
 
 def main():
